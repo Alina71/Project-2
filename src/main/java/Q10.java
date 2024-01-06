@@ -19,10 +19,18 @@ public class Q10{
         duplicateList.add("Vera");
         duplicateList.add("Luna");
         System.out.println("List with duplicates "+duplicateList);
-        Set<String>set=new HashSet<>(duplicateList);
-        List<String> withoutDuplicateList=new ArrayList<>(set);
-        System.out.println("List without duplicates "+withoutDuplicateList);
+          List<String> duplicateListWithoutDuplicates = new ArrayList<>();
+        for (String list : duplicateList) {
+            if (!duplicateListWithoutDuplicates.contains(list)) {
+                duplicateListWithoutDuplicates.add(list);
+            }
+        }
+        System.out.println("Original list without duplicates: "+duplicateListWithoutDuplicates);
+
     }
-    }
+}
+
+
+
 
 
